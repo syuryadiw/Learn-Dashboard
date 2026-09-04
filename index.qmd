@@ -1,0 +1,471 @@
+---
+title: "Dashboard Pengendalian & Mitigasi Karhutla Berbasis Masyarakat"
+author: "Syuryadi Wijaya"
+date: today
+format: 
+  dashboard: 
+    theme: darkly
+    scrolling: false
+    orientation: rows
+    nav-buttons: 
+      - icon: github
+        href: https://github.com/syuryadiw/Biodiversity-CMI
+    css: www/style.css
+execute: 
+  echo: false
+  warning: false
+  message: false 
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+source("load data.R")
+```
+
+
+# Sosialisasi & Edukasi
+
+## Row {height="15%}
+
+```{r}
+#| content: valuebox
+#| title: "Total Peserta"
+list(
+  icon  = "people-fill",
+  color = "primary",
+  value = nrow(clean_sosialisasi)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Total Dusun"
+list(
+  icon  = "geo-alt-fill",
+  color = "success",
+  value = n_distinct(clean_sosialisasi$Dusun)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Total Desa"
+list(
+  icon  = "map-fill",
+  color = "info",
+  value = n_distinct(clean_sosialisasi$Desa)
+)
+```
+
+## Row {height="25%}
+
+```{r}
+#| title: "Nama Pemateri Sosialisasi"
+clean_sosialisasi %>%
+  group_by(`Nama Pemateri Sosialisasi`, Dusun) %>%
+  summarise(`Jumlah Peserta` = n(), .groups = "drop") %>%
+  arrange(desc(`Jumlah Peserta`)) %>%
+  DT::datatable(
+    options = list(
+      pageLength = 5,
+      dom = "t",
+      scrollY = "120px"
+    ),
+    rownames = FALSE,
+    style = "bootstrap4"
+  )
+```
+
+## Row {height="25%"}
+
+```{r}
+#| title: "Nama Pemateri Sosialisasi"
+clean_sosialisasi %>%
+  group_by(`Nama Pemateri Sosialisasi`, Dusun) %>%
+  summarise(`Jumlah Peserta` = n(), .groups = "drop") %>%
+  arrange(desc(`Jumlah Peserta`)) %>%
+  DT::datatable(
+    options = list(
+      pageLength = 5,
+      dom = "t",
+      scrollY = "120px"
+    ),
+    rownames = FALSE,
+    style = "bootstrap4"
+  )
+```
+
+## Row {height="60%"}
+
+```{r}
+#| title: "Kategori Umur Peserta"
+
+df_umur <- clean_sosialisasi %>%
+  count(`Kategori Umur`) %>%
+  mutate(
+    `Kategori Umur` = factor(
+      `Kategori Umur`,
+      levels = c("18-25", "26-35", "36-45", "46-55", "55+")
+    )
+  ) %>%
+  arrange(`Kategori Umur`)
+
+warna_umur <- scales::viridis_pal(option = "D", begin = 0.2, end = 0.9)(nrow(df_umur))
+
+df_umur %>%
+  plot_ly(
+    x      = ~`Kategori Umur`,
+    y      = ~n,
+    type   = "bar",
+    marker = list(color = warna_umur)
+  ) %>%
+  layout(
+    xaxis         = list(title = "Kategori Umur", color = "white"),
+    yaxis         = list(title = "Jumlah Peserta", color = "white"),
+    paper_bgcolor = "transparent",
+    plot_bgcolor  = "transparent",
+    font          = list(color = "white")
+  )
+```
+
+```{r}
+#| title: "Distribusi Jenis Kelamin"
+
+clean_sosialisasi %>%
+  filter(!is.na(`Jenis Kelamin`)) %>%
+  count(`Jenis Kelamin`) %>%
+  plot_ly(
+    labels  = ~`Jenis Kelamin`,
+    values  = ~n,
+    type    = "pie",
+    hole    = 0.4,
+    marker  = list(
+      colors = c("#00b894", "#fdcb6e"),
+      line   = list(color = "#222222", width = 2)
+    ),
+    domain  = list(y = c(0.15, 1))
+  ) %>%
+  layout(
+    paper_bgcolor = "transparent",
+    plot_bgcolor  = "transparent",
+    font          = list(color = "white"),
+    legend        = list(
+      orientation = "h",
+      xanchor     = "center",
+      yanchor     = "top",
+      x           = 0.5,
+      y           = 0.05,
+      font        = list(color = "white")
+    )
+  )
+```
+
+# Penggalian Aspirasi
+
+## Row {height="15%"}
+
+```{r}
+#| content: valuebox
+#| title: "Total Partisipan"
+list(
+  icon  = "people-fill",
+  color = "primary",
+  value = nrow(clean_aspirasi) 
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Luas Lahan (Ha)"
+list(
+  icon  = "map-fill",
+  color = "success",
+  color = "succsess",
+  value = round(sum(clean_aspirasi$`Luas Lahan`, na.rm = TRUE), 2)
+)
+```
+
+## Row {height="45%"}
+
+```{r}
+#| title: "Jenis Insentif Diusulkan"
+
+df_insentif <- clean_aspirasi %>%
+  filter(!is.na(`Jenis Insentif Diusulkan`)) %>%
+  count(`Jenis Insentif Diusulkan`) %>%
+  arrange(desc(n)) %>%
+  mutate(
+    `Jenis Insentif Diusulkan` = factor(
+      `Jenis Insentif Diusulkan`, 
+      levels = `Jenis Insentif Diusulkan`
+    )
+  )
+
+warna_insentif <- scales::viridis_pal(option = "G", begin = 0.3, end = 0.9)(nrow(df_insentif))
+
+df_insentif %>%
+  plot_ly(
+    x      = ~`Jenis Insentif Diusulkan`,
+    y      = ~n,
+    type   = "bar",
+    marker = list(color = warna_insentif)
+  ) %>%
+  layout(
+    xaxis         = list(
+      title     = "", 
+      color     = "white",
+      tickangle = 0
+    ),
+    yaxis         = list(title = "Jumlah", color = "white"),
+    paper_bgcolor = "transparent",
+    plot_bgcolor  = "transparent",
+    font          = list(color = "white"),
+    margin        = list(b = 140)
+  )
+```
+
+```{r}
+#| title: "Distribusi per Dusun"
+
+df_dusun <- clean_aspirasi %>%
+  filter(!is.na(Dusun)) %>%
+  count(Dusun) %>%
+  arrange(desc(n))
+
+warna_dusun <- scales::viridis_pal(option = "D", begin = 0.2, end = 0.85)(nrow(df_dusun))
+
+df_dusun %>%
+  plot_ly(
+    labels = ~Dusun,
+    values = ~n,
+    type   = "pie",
+    hole   = 0.4,
+    marker = list(
+      colors = warna_dusun,
+      line   = list(color = "#222222", width = 2)
+    ),
+    domain = list(y = c(0.15, 1))
+  ) %>%
+  layout(
+    paper_bgcolor = "transparent",
+    plot_bgcolor  = "transparent",
+    font          = list(color = "white"),
+    legend        = list(
+      orientation = "h",
+      xanchor     = "center",
+      x           = 0.5,
+      y           = 0.05,
+      font        = list(color = "white")
+    )
+  )
+```
+
+## Row {height="40%"}
+
+```{r}
+#| title: "Detail Penggalian Aspirasi"
+clean_aspirasi %>%
+  select(Tanggal, `Nama Pemberi Aspirasi`, Dusun, Desa, `Jenis Insentif Diusulkan`, `Luas Lahan`, Keterangan) %>%
+  DT::datatable(
+    options = list(
+      pageLength = 5,
+      dom        = "tp",
+      scrollX    = TRUE,
+      columnDefs = list(
+        list(width = '110px', targets = 0), 
+        list(width = '150px', targets = 1), 
+        list(width = '200px', targets = 4)
+      )
+    ),
+    rownames = FALSE,
+    style    = "bootstrap4"
+  )
+```
+
+# Jadwal Bakar
+
+## Row {height="20%"}
+
+```{r}
+#| content: valuebox
+#| title: "Jadwal Bakar"
+list(
+  icon  = "calendar2-check-fill",
+  color = "warning",
+  value = nrow(clean_jadwalmembakar)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Desa"
+list(
+  icon  = "map-fill",
+  color = "danger",
+  value = n_distinct(clean_jadwalmembakar$Desa)
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Dusun"
+list(
+  icon  = "geo-alt-fill",
+  color = "primary",
+  value = n_distinct(clean_jadwalmembakar$Dusun)
+)
+```
+
+## Row {height="40%"}
+
+```{r}
+#| title: "Intensitas Rencana Pembakaran per Desa"
+df_jadwal_desa <- clean_jadwalmembakar %>%
+  filter(!is.na(Desa)) %>%
+  count(Desa) %>%
+  arrange(desc(n))
+
+warna_jadwal <- scales::viridis_pal(option = "D", begin = 0.2, end = 0.9)(nrow(df_jadwal_desa))
+
+df_jadwal_desa %>%
+  plot_ly(
+    x      = ~factor(Desa, levels = Desa),
+    y      = ~n,
+    type   = "bar",
+    marker = list(color = warna_jadwal)
+  ) %>%
+  layout(
+    xaxis         = list(title = "", color = "white", tickangle = 0),
+    yaxis         = list(title = "Jumlah Jadwal", color = "white"),
+    paper_bgcolor = "transparent",
+    plot_bgcolor  = "transparent",
+    font          = list(color = "white"),
+    margin        = list(b = 60)
+  )
+```
+
+```{r}
+#| title: "Intensitas Rencana Pembakaran per Bulan"
+df_bulan_bakar <- clean_jadwalmembakar %>%
+  filter(!is.na(`Tanggal Pembakaran Lahan`)) %>%
+  mutate(Bulan = format(`Tanggal Pembakaran Lahan`, "%b %Y")) %>%
+  count(Bulan) %>%
+  arrange(ymd(paste0("01 ", Bulan)))
+
+warna_bulan_bakar <- scales::viridis_pal(option = "E", begin = 0.2, end = 0.9)(nrow(df_bulan_bakar))
+
+df_bulan_bakar %>%
+  plot_ly(
+    x      = ~factor(Bulan, levels = Bulan),
+    y      = ~n,
+    type   = "bar",
+    marker = list(color = warna_bulan_bakar)
+  ) %>%
+  layout(
+    xaxis         = list(title = "", color = "white", tickangle = 0),
+    yaxis         = list(title = "Jumlah Jadwal", color = "white"),
+    paper_bgcolor = "transparent",
+    plot_bgcolor  = "transparent",
+    font          = list(color = "white"),
+    margin        = list(b = 60)
+  )
+```
+
+## Row {height="40%"}
+
+```{r}
+#| title: "Jadwal Pembakaran Lahan Masyarakat"
+clean_jadwalmembakar %>%
+  DT::datatable(
+    options = list(
+      pageLength = 5,
+      dom        = "ftip",
+      scrollX    = TRUE
+    ),
+    rownames = FALSE,
+    style = "bootstrap4"
+  )
+```
+
+# Hostpot & Aktivitas Membakar
+
+## Row {height="20%"}
+
+```{r}
+#| content: valuebox
+#| title: "Titik Hotspot"
+list(
+  icon  = "fire",
+  color = "danger",
+  value = nrow(clean_hotspot %>% filter(`Tipe Insiden` == "Kebakaran lahan (hotspot)"))
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Dibakar & Dijaga"
+list(
+  icon  = "shield-check",
+  color = "success",
+  value = nrow(clean_hotspot %>% filter(`Tipe Insiden` == "Sudah dibakar & dijaga (non-hotspot)"))
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Desa Terdampak"
+list(
+  icon  = "map-fill",
+  color = "warning",
+  value = n_distinct(clean_hotspot$Desa)
+)
+```
+
+
+## Row {height="85%"}
+
+```{r}
+#| title: "Peta Sebaran Titik Insiden & Aktivitas Pembakaran"
+
+library(leaflet)
+
+pal_peta <- colorFactor(
+  palette = c("#ff7675", "#00b894"),
+  domain  = clean_hotspot$`Tipe Insiden`
+)
+
+clean_hotspot %>%
+  filter(!is.na(Longitude) & !is.na(Latitude)) %>%
+  leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(
+    lng = ~Longitude,
+    lat = ~Latitude,
+    radius = 7,
+    color = ~pal_peta(`Tipe Insiden`),
+    stroke = TRUE,
+    weight = 1.5,
+    fillOpacity = 0.85,
+   popup = ~paste0(
+      "<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'>",
+      "<b>Desa:</b> ", Desa, "<br>",
+      "<b>Dusun:</b> ", Dusun, "<br>",
+      "<b>Tipe Insiden:</b> ", `Tipe Insiden`, "<br>",
+      "<b>Nama Pemilik Lahan:</b> ", `Nama Pemilik Lahan`, "<br>",
+      "<b>Tanggal:</b> ", Tanggal, "<br>",
+      "<b>Luas Terbakar (Ha):</b> ", `Luas Terbakar (Ha)`, " Ha<br>",
+      "<b>Keterangan:</b> ", Keterangan,
+      "</div>"
+    )
+  ) %>%
+  addLegend(
+    position = "bottomright",
+    pal = pal_peta,
+    values = ~`Tipe Insiden`,
+    title = "Kategori Insiden",
+    opacity = 0.9
+  )
+```
+
