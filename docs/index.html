@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Syuryadi Wijaya">
+<meta name="dcterms.date" content="2026-09-04">
+
+<title>Dashboard Pengendalian &amp; Mitigasi Karhutla Berbasis Masyarakat</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-00feface57a40fb7a06c8694f9a70c45.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-dark-00feface57a40fb7a06c8694f9a70c45.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-00feface57a40fb7a06c8694f9a70c45.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="site_libs/quarto-dashboard/stickythead.js"></script>
+
+
+
+<script src="site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="site_libs/quarto-dashboard/components.js"></script>
+
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="site_libs/datatables-binding-0.34.0/datatables.js"></script>
+
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="site_libs/dt-core-bootstrap4-1.13.6/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+<link href="site_libs/dt-core-bootstrap4-1.13.6/css/dataTables.bootstrap4.extra.css" rel="stylesheet">
+
+<script src="site_libs/dt-core-bootstrap4-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script src="site_libs/dt-core-bootstrap4-1.13.6/js/dataTables.bootstrap4.min.js"></script>
+
+<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+
+<script src="site_libs/plotly-binding-4.12.0/plotly.js"></script>
+
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<link href="site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+
+<script src="site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="www/style.css">
+</head>
+
+<body class="quarto-dashboard nav-fixed dashboard-fill fullcontent quarto-light">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Dashboard Pengendalian &amp; Mitigasi Karhutla Berbasis Masyarakat</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/syuryadiw/Dashboard-Karhutla"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          <div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="https://github.com/syuryadiw/Biodiversity-CMI"><i class="bi bi-github"></i></a></div></div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+    <div class="navbar-brand-container">
+
+
+      <div class="navbar-title">
+        <div class="navbar-title-text"><a href="#">Dashboard Pengendalian &amp; Mitigasi Karhutla Berbasis Masyarakat</a></div>
+        
+        <div class="navbar-author">Syuryadi Wijaya</div>
+      </div>
+    </div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-sosialisasi-edukasi" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#sosialisasi-edukasi" data-scrolling="false" href="#sosialisasi-edukasi" aria-controls="sosialisasi-edukasi" aria-selected="true"><span class="nav-link-text">Sosialisasi &amp; Edukasi</span></a></li><li class="nav-item" role="presentation"><a id="tab-penggalian-aspirasi" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#penggalian-aspirasi" data-scrolling="false" href="#penggalian-aspirasi" aria-controls="penggalian-aspirasi" aria-selected="false"><span class="nav-link-text">Penggalian Aspirasi</span></a></li><li class="nav-item" role="presentation"><a id="tab-jadwal-bakar" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#jadwal-bakar" data-scrolling="false" href="#jadwal-bakar" aria-controls="jadwal-bakar" aria-selected="false"><span class="nav-link-text">Jadwal Bakar</span></a></li><li class="nav-item" role="presentation"><a id="tab-hostpot-aktivitas-membakar" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#hostpot-aktivitas-membakar" data-scrolling="false" href="#hostpot-aktivitas-membakar" aria-controls="hostpot-aktivitas-membakar" aria-selected="false"><span class="nav-link-text">Hostpot &amp; Aktivitas Membakar</span></a></li></ul></div></div>
+</nav>
+</header></header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+<!-- main -->
+
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="sosialisasi-edukasi" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-sosialisasi-edukasi">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, NaNfr) minmax(3em, NaNfr) minmax(3em, 25fr) minmax(3em, 60fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-primary showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="people-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-people-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Total Peserta
+</p>
+<p class="value-box-value">
+253
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-success showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="geo-alt-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-geo-alt-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Total Dusun
+</p>
+<p class="value-box-value">
+6
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-info showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="map-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-map-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Total Desa
+</p>
+<p class="value-box-value">
+2
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Nama Pemateri Sosialisasi" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Nama Pemateri Sosialisasi
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-bc2910d80c9ea48d0b75" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-bc2910d80c9ea48d0b75">{"x":{"style":"bootstrap4","filter":"none","vertical":false,"data":[["Syuriansyah","Claudia Evatrio Wanda","Teka Lestari","Monica Carolla","Jus Skarman","Marius Maritho","Muh. Asnawi","Markus Topan","Muh. Asnawi","Muh. Asnawi"],["Raut Kayan","Raut Muara","Mabah","Raut Muara","Punti Meraga","Raut Muara","Mabah","Punti Kayan","Gramajaya","Raut Muara"],[92,41,35,30,16,16,12,7,3,1]],"container":"<table class=\"table table-striped table-hover row-border order-column display\">\n  <thead>\n    <tr>\n      <th>Nama Pemateri Sosialisasi<\/th>\n      <th>Dusun<\/th>\n      <th>Jumlah Peserta<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"t","language":{"info":"Showing _TOTAL_ entries"},"pageLength":5,"scrollY":"120px","columnDefs":[{"className":"dt-right","targets":2},{"name":"Nama Pemateri Sosialisasi","targets":0},{"name":"Dusun","targets":1},{"name":"Jumlah Peserta","targets":2}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Nama Pemateri Sosialisasi" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Nama Pemateri Sosialisasi
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-30cc3da5e87bdab8d135" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-30cc3da5e87bdab8d135">{"x":{"style":"bootstrap4","filter":"none","vertical":false,"data":[["Syuriansyah","Claudia Evatrio Wanda","Teka Lestari","Monica Carolla","Jus Skarman","Marius Maritho","Muh. Asnawi","Markus Topan","Muh. Asnawi","Muh. Asnawi"],["Raut Kayan","Raut Muara","Mabah","Raut Muara","Punti Meraga","Raut Muara","Mabah","Punti Kayan","Gramajaya","Raut Muara"],[92,41,35,30,16,16,12,7,3,1]],"container":"<table class=\"table table-striped table-hover row-border order-column display\">\n  <thead>\n    <tr>\n      <th>Nama Pemateri Sosialisasi<\/th>\n      <th>Dusun<\/th>\n      <th>Jumlah Peserta<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"t","language":{"info":"Showing _TOTAL_ entries"},"pageLength":5,"scrollY":"120px","columnDefs":[{"className":"dt-right","targets":2},{"name":"Nama Pemateri Sosialisasi","targets":0},{"name":"Dusun","targets":1},{"name":"Jumlah Peserta","targets":2}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Kategori Umur Peserta" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Kategori Umur Peserta
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-ab589e550be88b3a040a" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-ab589e550be88b3a040a">{"x":{"visdat":{"605c2da52966":["function () ","plotlyVisDat"]},"cur_data":"605c2da52966","attrs":{"605c2da52966":{"x":{},"y":{},"marker":{"color":["#414487FF","#306A8EFF","#228B8DFF","#26AD81FF","#62CB5FFF","#BBDF27FF"]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Kategori Umur","color":"white","type":"category","categoryorder":"array","categoryarray":["18-25","26-35","36-45","46-55","55+"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Jumlah Peserta","color":"white"},"paper_bgcolor":"transparent","plot_bgcolor":"transparent","font":{"color":"white"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["18-25","26-35","36-45","46-55","55+"],"y":[6,30,73,81,51],"marker":{"color":["#414487FF","#306A8EFF","#228B8DFF","#26AD81FF","#62CB5FFF","#BBDF27FF"],"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Distribusi Jenis Kelamin" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Distribusi Jenis Kelamin
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-4b1f64df8ada20304cbc" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-4b1f64df8ada20304cbc">{"x":{"visdat":{"605c195e5dd3":["function () ","plotlyVisDat"]},"cur_data":"605c195e5dd3","attrs":{"605c195e5dd3":{"labels":{},"values":{},"hole":0.40000000000000002,"marker":{"colors":["#00b894","#fdcb6e"],"line":{"color":"#222222","width":2}},"domain":{"y":[0.14999999999999999,1]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"paper_bgcolor":"transparent","plot_bgcolor":"transparent","font":{"color":"white"},"legend":{"orientation":"h","xanchor":"center","yanchor":"top","x":0.5,"y":0.050000000000000003,"font":{"color":"white"}},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Laki-Laki","Perempuan"],"values":[188,65],"hole":0.40000000000000002,"marker":{"color":"rgba(31,119,180,1)","colors":["#00b894","#fdcb6e"],"line":{"color":"#222222","width":2}},"domain":{"y":[0.14999999999999999,1]},"type":"pie","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="penggalian-aspirasi" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-penggalian-aspirasi">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 15fr) minmax(3em, 45fr) minmax(3em, 40fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-primary showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="people-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-people-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Total Partisipan
+</p>
+<p class="value-box-value">
+70
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-succsess showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="map-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-map-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Luas Lahan (Ha)
+</p>
+<p class="value-box-value">
+34.09
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Jenis Insentif Diusulkan" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Jenis Insentif Diusulkan
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-b5a9f338d660f34e5d4c" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-b5a9f338d660f34e5d4c">{"x":{"visdat":{"605c681b781e":["function () ","plotlyVisDat"]},"cur_data":"605c681b781e","attrs":{"605c681b781e":{"x":{},"y":{},"marker":{"color":["#414081FF","#38639DFF","#3486A5FF","#37A8ACFF","#55CAADFF","#A8E1BCFF"]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":140,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"","color":"white","tickangle":0,"type":"category","categoryorder":"array","categoryarray":["Jadwal bakar","Tidak membuka/membakar","Pupuk & pestisida","Training/pelatihan","Alat pertanian/perkebunan","Pupuk & pestisida, Tidak membuka/membakar"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Jumlah","color":"white"},"paper_bgcolor":"transparent","plot_bgcolor":"transparent","font":{"color":"white"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Jadwal bakar","Tidak membuka/membakar","Pupuk & pestisida","Training/pelatihan","Alat pertanian/perkebunan","Pupuk & pestisida, Tidak membuka/membakar"],"y":[56,6,4,2,1,1],"marker":{"color":["#414081FF","#38639DFF","#3486A5FF","#37A8ACFF","#55CAADFF","#A8E1BCFF"],"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Distribusi per Dusun" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Distribusi per Dusun
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-c5be9978682d09bad5b8" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-c5be9978682d09bad5b8">{"x":{"visdat":{"605c2ccd4b1c":["function () ","plotlyVisDat"]},"cur_data":"605c2ccd4b1c","attrs":{"605c2ccd4b1c":{"labels":{},"values":{},"hole":0.40000000000000002,"marker":{"colors":["#414487FF","#31678EFF","#24868EFF","#21A585FF","#4DC36BFF","#9AD93CFF"],"line":{"color":"#222222","width":2}},"domain":{"y":[0.14999999999999999,1]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"paper_bgcolor":"transparent","plot_bgcolor":"transparent","font":{"color":"white"},"legend":{"orientation":"h","xanchor":"center","x":0.5,"y":0.050000000000000003,"font":{"color":"white"}},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"labels":["Raut Muara","Punti Meraga","Raut Kayan","Punti Kayan","Mabah","Gramajaya"],"values":[17,16,15,13,8,1],"hole":0.40000000000000002,"marker":{"color":"rgba(31,119,180,1)","colors":["#414487FF","#31678EFF","#24868EFF","#21A585FF","#4DC36BFF","#9AD93CFF"],"line":{"color":"#222222","width":2}},"domain":{"y":[0.14999999999999999,1]},"type":"pie","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Detail Penggalian Aspirasi" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Detail Penggalian Aspirasi
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-674ee381a237403ef2fb" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-674ee381a237403ef2fb">{"x":{"style":"bootstrap4","filter":"none","vertical":false,"data":[["2026-05-10","2026-05-20","2026-05-20","2026-05-20","2026-05-20","2026-05-20","2026-05-21","2026-05-21","2026-05-21","2026-05-22","2026-05-22","2026-05-22","2026-05-22","2026-05-22","2026-05-22","2026-05-22","2026-05-23","2026-05-23","2026-05-23","2026-05-23","2026-05-23","2026-05-23","2026-05-23","2026-05-25","2026-05-25","2026-05-25","2026-05-26","2026-05-26","2026-05-26","2026-05-26","2026-05-26","2026-05-26","2026-05-28","2026-05-28","2026-05-28","2026-05-28","2026-05-29","2026-05-30","2026-05-30","2026-05-31","2026-06-01","2026-06-01","2026-06-02","2026-06-02","2026-06-02","2026-06-02","2026-06-03","2026-06-03","2026-06-03","2026-06-03","2026-06-03","2026-06-03","2026-06-03","2026-06-03","2026-06-05","2026-06-06","2026-06-13","2026-06-13","2026-06-13","2026-06-13","2026-06-13","2026-06-13","2026-06-13","2026-06-13","2026-06-15","2026-06-15","2026-06-15","2026-06-15","2026-06-15","2026-08-27"],["Doni","Marsianus Nambet","Marsianus Nambet","Marsianus Nambet","Sutono","Urbanus Tingih","Fauzi","Ignasius Herman","Tancun","Akum","Arbitus Kucek","Fransiskus Tida","Laus","Maslan","Romansyah","Thomas Tongs","A. Basri","Buin","Dusen","Gadek","Mia","Peronikus Firman","Siahaan","Jos Sudarso","Pintus","Pransiskus Jaman","Hermanto","Pilipus Nadin","Sumardi","Teresia","Yak Mindra","Zakarius tobing","Anua","Jaya","Jaya","Yulius Tiralitus","Tam Sujarwo","Jonatus","Yosef Deri","Nawi","As","Jek Andeng Putra","Mangku","Markus","Nakoh","Nyamping","Abdul Asih","Bab","Manik","Redet","Sandang","Sumaryono","Tundon","Udin","Romulus Andi","Yupita Korala","Amedes","Badu","Banceh","Eka","Eko","Lugit","Muladin","Windra","Iman","Judin","Diams","Kendil","Marcel","Matius Manyun"],["Mabah","Punti Kayan","Punti Kayan","Punti Kayan","Punti Kayan","Punti Kayan","Raut Kayan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Mabah","Mabah","Raut Kayan","Raut Kayan","Raut Kayan","Mabah","Mabah","Raut Kayan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Kayan","Raut Muara","Raut Muara","Raut Muara","Raut Kayan","Raut Kayan","Raut Kayan","Mabah","Punti Meraga","Punti Meraga","Mabah","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Punti Meraga","Mabah","Punti Meraga","Raut Muara","Gramajaya","Raut Kayan","Raut Kayan","Punti Kayan","Raut Kayan","Punti Kayan","Raut Kayan","Raut Kayan","Raut Kayan","Punti Kayan","Punti Kayan","Punti Kayan","Punti Kayan","Punti Kayan","Punti Kayan"],["Raut Muara","Nekan","Nekan","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Raut Muara","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan","Raut Muara","Nekan","Raut Muara","Nekan","Raut Muara","Raut Muara","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Nekan","Nekan","Nekan","Nekan"],["Jadwal bakar","Pupuk &amp; pestisida","Alat pertanian/perkebunan","Training/pelatihan","Pupuk &amp; pestisida","Tidak membuka/membakar","Pupuk &amp; pestisida","Jadwal bakar","Pupuk &amp; pestisida","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Tidak membuka/membakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Tidak membuka/membakar","Tidak membuka/membakar","Tidak membuka/membakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Tidak membuka/membakar","Jadwal bakar","Training/pelatihan","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Jadwal bakar","Pupuk &amp; pestisida, Tidak membuka/membakar"],[null,2,0,0,1,1,1,1.5,1,null,null,1,null,null,null,null,1,2,0.5,1.5,1,2,null,0.5,0.8,0.5,1,1,1,1,2,1,0,4,1,2,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0.79,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["Bersedia memberikan informasi jadwal membuka/membakar lahan","Pupuk kimia","Pemotong dahan sejenis chainsaw","Pengenalan dan training pertanian tanpa bakar","Pupuk mutiara, pupuk cantik","Sudah tidak membuka/membakar lahan, bantuan pupuk &amp; pestisida","Pupuk kimia","Bersedia memberikan informasi jadwal membuka/membakar lahan","Pupuk kimia","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan, termasuk titik potential fire area","Bersedia memberikan informasi jadwal membuka/membakar lahan, termasuk titik potential fire area","Bersedia memberikan informasi jadwal membuka/membakar lahan, termasuk titik potential fire area","Bersedia memberikan informasi jadwal membuka/membakar lahan, termasuk titik potential fire area","Sudah tidak membuka/membakar lahan, bantuan pupuk &amp; pestisida","Bersedia memberikan informasi jadwal membuka/membakar lahan, termasuk titik potential fire area","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Sudah tidak membuka/membakar lahan, lahan sudah berbentuk sawah, bantuan pupuk &amp; pestisida, termasuk titik potential fire area","Bersedia tidak membakar jika diberi bantuan pupuk dan pestisida, tidak dibakar menyeluruh karena sudah ditanami sawit, termasuk titik potential fire area","Perlu dilakukan verifiaksi dan groundcheck untuk lokasi dan kondisi lahan","Bersedia tidak membakar jika diberi bantuan pupuk dan pestisida, tidak dibakar menyeluruh karena sudah ditanami sawit, termasuk titik potential fire area","Bersedia memberikan informasi jadwal membuka/membakar lahan, tidak dibakar menyeluruh karena sudah ditanami sawit","Bersedia tidak membakar jika diberi bantuan pupuk dan pestisida, tidak dibakar menyeluruh karena sudah ditanami sawit, termasuk titik potential fire area","Bersedia memberikan informasi jadwal membuka/membakar lahan, tidak dibakar menyeluruh karena sudah ditanami sawit","Sudah tidak memiliki lahan, sudah tidak berladang dari lama, termasuk titik potential fire area","Bersedia tidak membakar jika diberi bantuan pupuk dan pestisida, tidak dibakar menyeluruh karena sudah ditanami sawit, termasuk titik potential fire area","Sementara masih menunggu hasil diskusi bersama keluarga terkait tawaran lahan tersebut menjadi lahan percontohan untuk pertanian tanpa bakar, perlu dilakukan groundcheck ulang terkait lokasi lahan, termasuk titik potential fire area","Bersedia memberikan informasi jadwal membuka/membakar lahan, tidak dibakar menyeluruh karena sudah ditanami sawit, kepemilikan lahan atas nama Parman, termasuk titik potential fire area","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan, tidak dibakar menyeluruh karena sudah ditanami sawit","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Bersedia memberikan informasi jadwal membuka/membakar lahan","Pemilik lahan menyatakan tidak akan membakar lahan secara masif, membutuhkan bantuan pembersihan lahan dan racun rumput"]],"container":"<table class=\"table table-striped table-hover row-border order-column display\">\n  <thead>\n    <tr>\n      <th>Tanggal<\/th>\n      <th>Nama Pemberi Aspirasi<\/th>\n      <th>Dusun<\/th>\n      <th>Desa<\/th>\n      <th>Jenis Insentif Diusulkan<\/th>\n      <th>Luas Lahan<\/th>\n      <th>Keterangan<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"tp","language":{"info":"Showing _TOTAL_ entries"},"pageLength":5,"scrollX":true,"columnDefs":[{"width":"110px","targets":0},{"width":"150px","targets":1},{"width":"200px","targets":4},{"className":"dt-right","targets":5},{"name":"Tanggal","targets":0},{"name":"Nama Pemberi Aspirasi","targets":1},{"name":"Dusun","targets":2},{"name":"Desa","targets":3},{"name":"Jenis Insentif Diusulkan","targets":4},{"name":"Luas Lahan","targets":5},{"name":"Keterangan","targets":6}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="jadwal-bakar" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-jadwal-bakar">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 20fr) minmax(3em, 40fr) minmax(3em, 40fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-warning showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="calendar2-check-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-calendar2-check-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Jadwal Bakar
+</p>
+<p class="value-box-value">
+214
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-danger showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="map-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-map-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Desa
+</p>
+<p class="value-box-value">
+8
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-primary showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="geo-alt-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-geo-alt-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Dusun
+</p>
+<p class="value-box-value">
+9
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Intensitas Rencana Pembakaran per Desa" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Intensitas Rencana Pembakaran per Desa
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-d0c3bbcae8f613277091" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-d0c3bbcae8f613277091">{"x":{"visdat":{"605c6341273f":["function () ","plotlyVisDat"]},"cur_data":"605c6341273f","attrs":{"605c6341273f":{"x":{},"y":{},"marker":{"color":["#414487FF","#32648EFF","#27808EFF","#1E9C89FF","#35B779FF","#6FCF57FF","#BBDF27FF"]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":60,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"","color":"white","tickangle":0,"type":"category","categoryorder":"array","categoryarray":["Raut Muara","Nekan","Sekendal","Thang Raya","Mawang Muda","Engkahan","Sungai Ilai"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Jumlah Jadwal","color":"white"},"paper_bgcolor":"transparent","plot_bgcolor":"transparent","font":{"color":"white"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Raut Muara","Nekan","Sekendal","Thang Raya","Mawang Muda","Engkahan","Sungai Ilai"],"y":[116,69,17,6,3,1,1],"marker":{"color":["#414487FF","#32648EFF","#27808EFF","#1E9C89FF","#35B779FF","#6FCF57FF","#BBDF27FF"],"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card cell html-fill-item html-fill-container bslib-card" data-title="Intensitas Rencana Pembakaran per Bulan" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Intensitas Rencana Pembakaran per Bulan
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="plotly html-widget html-fill-item html-fill-container" id="htmlwidget-7cbd083928134d8f623c" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-7cbd083928134d8f623c">{"x":{"visdat":{"605c1961576c":["function () ","plotlyVisDat"]},"cur_data":"605c1961576c","attrs":{"605c1961576c":{"x":{},"y":{},"marker":{"color":["#31446BFF","#6E6E73FF","#A69D75FF","#E7D159FF"]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":60,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"","color":"white","tickangle":0,"type":"category","categoryorder":"array","categoryarray":["Aug 2026","Jul 2026","Jun 2026","May 2026"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Jumlah Jadwal","color":"white"},"paper_bgcolor":"transparent","plot_bgcolor":"transparent","font":{"color":"white"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Aug 2026","Jul 2026","Jun 2026","May 2026"],"y":[158,43,11,1],"marker":{"color":["#31446BFF","#6E6E73FF","#A69D75FF","#E7D159FF"],"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Jadwal Pembakaran Lahan Masyarakat" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Jadwal Pembakaran Lahan Masyarakat
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-4361f015f777d7cb9191" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4361f015f777d7cb9191">{"x":{"style":"bootstrap4","filter":"none","vertical":false,"data":[["Yosef Deri","Tundon","Mace","Pian/Piyan (belum teridentifikasi)","Buin","Amin (data dashboard hotspot)","Aripin (data dashboard hotspot)","Topik (data dashboard hotspot)","Jitan (data dashboard hotspot)","Eko (data dashboard hotspot)","Redis (data dashboard hotspot)","Barto Subari (data dashboard hotspot)","Unidentified 1","Danto (data dashboard hotspot)","Adi (data dashboard hotspot)","Milias (data dashboard hotspot)","Unidentified 2","Dodi (data dashboard hotspot)","Unidentified 3","Unidentified 4","Unidentified 5","Unidentified 6","Unidentified 7","Nang (data dashboard hotspot)","Unidentified 8","Unidentified 9","Kalim (data dashboard hotspot)","Komunal Masyarakat","Kalim","Unidentified 11","Tengah (data dashboard hotspot)","Iman (data dashboard hotspot)","Judin (data dashboard hotspot)","Komunal Masyarakat","Unidentified 11","Pitor (data dashboard hotspot)","Dedi (data dashboard hotspot)","Nopi (data dashboard hotspot)","Masyarakat","Dimut (data dashboard hotspot)","Edo (data dashboard hotspot)","Komunal Masyarakat","Sepupu Tibius (data dashboard hotspot)","Iwan (data dashboard hotspot)","Lintang (data dashboard hotspot)","Diki (data dashboard hotspot)","Masyarakat","Ruslan (data dashboard hotspot)","Rantut (data dashboard hotspot)","Pian (data dashboard hotspot)","Ace (data dashboard hotspot)","Kunto (data dashboard hotspot)","Dum (data dashboard hotspot)","Remun (data dashboard hotspot)","Ben (data dashboard hotspot)","Rambai (data dashboard hotspot)","Azis (data dashboard hotspot)","Rego (data dashboard hotspot)","Unidentified 12","Unidentified 13","Unidentified 14","Unidentified 15","Hutan Komunal","Masyarakat","Unidentified 16","Blasius Tola (data dashboard hotspot)","Hutan Komunal","Unidentified 17","Banggal (data dashboard hotspot)","Unidentified 18","Unidentified 19","Unidentified 20","Unidentified 21","Unidentified 22","Unidentified 23","Unidentified 24","Unidentified 25","Unidentified 26","Lintang (data dashboard hotspot)","Kedau (data dashboard hotspot)","Kedau (data dashboard hotspot)","Tiah (data dashboard hotspot)","Becik (data dashboard hotspot)","Madu (data dashboard hotspot)","Becik (data dashboard hotspot)","Pemus (data dashboard hotspot)","Darso (data dashboard hotspot)","Joss (data dashboard hotspot)","Arun (data dashboard hotspot)","Komunal Masyarakat","Mijo (data dashboard hotspot)","Unidentified 27","Unidentified 28","Komunal Masyarakat","Murat (data dashboard hotspot) 2","Murat (data dashboard hotspot) 2","Moses (data dashboard hotspot)","Komunal Masyarakat","Komunal Masyarakat","Dedi (data dashboard hotspot)","Unidentified 29","Unidentified 30","Peronikus Firman","A. Basri","Yupita Kolara","Honorius Barus","Meli","Likin","Ade Saputra","Samsul","Berri, Gatot dan Rio","Dubin","Eko","Abdurrahman","Darius","Sarif","Erik","Pintus","Runtus","Narso","Wento","Abdul Hadi","Iman","Jesen","Kakang","Hubartus Darsono","Ani","Berto","Ariyanto","Abang","Romansa","Menong","Marselinus Roso","Eki","Lusia Jemi","Dores","Jemain","Harto","Suratin","Banus, Yuda","Nas","Iwan","Dorah","Barto Subari","Laten","Sas","Dius","boyon","Lojong","Along","Pet","Madi","Darmo","Kenoh","Hendra","Kerang","Semaun","Tiken","Markus","Fidelis Ricet","Iman","Aludun","Yulius Tiralitus","Ega","Rano, Paeng, Musin, Jelani, Biar, Talok","Murat","Edo","Ajan","Diman","Eno","Markus Agustinus Simbolon","Remi","Aliyas","Langsuono","Ageo","Panus","Januaria","Stefanus Thomas","Urbanus Tingih","Liam","Ties","Tengah","Reli","Agnes","Lipa","Petrus Peto","Sujatmiko","Yopinus Toton","Petrus Han","Jinyan, Ahim","Yuliana","Lusiana Diyut","Lasius Lingkan","Prederik Alwi","Yosepa Endang","Peripin","Piran","Tinggang","Agineus","Agato","Lio","Usmanto","Kidarto","Lacing, Arun, Barsah, Tangkok","Abidin","Bejik Jayamelana, Bangal","Bambang, Beren, Iwan","Nodi","Sudirman","Iyo","Akum","Silvinus Nan","Romulus Andi",null],["Mabah","Mabah","Entubah","Raut Muara","Mabah",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Punti Kayan",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Punti Meraga","Punti Meraga",null,null,null,null,null,null,"Mabah","Mabah","Grama Jaya","Mabah","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Mabah","Raut Kayan","Raut Kayan","Raut Muara","Raut Muara","Raut Muara","Mabah","Raut Kayan","Raut Kayan","Raut Muara","Raut Muara","Punti Kayan","Grama Jaya","Mabah","Punti Kayan","Raut Muara","Raut Muara","Raut Kayan","Raut Kayan","Grama Jaya","Punti Kayan","Raut Muara","Punti Kayan","Mabah","Raut Muara","Punti Kayan","Raut Muara","Punti Kayan","Mabah","Mabah","Raut Muara","Raut Muara","Mabah","Punti Kayan","Raut Muara","Mabah","Mabah","Mabah","Punti Kayan","Raut Muara","Grama Jaya","Punti Kayan","Punti Kayan","Mabah","Raut Muara","Raut Muara","Raut Muara","Punti Kayan","Punti Kayan","Mabah","Raut Muara","Punti Meraga","Punti Meraga","Mabah","Punti Kayan","Raut Muara","Mabah","Mabah","Mabah","Nekan","Punti Meraga","Punti Meraga","Punti Meraga","Raut Muara","Mabah","Punti Kayan","Punti Meraga","Punti Kayan","Punti Kayan","Mabah","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Punti Kayan","Punti Kayan","Punti Kayan","Raut Muara","Raut Muara","Raut Muara","Punti Kayan","Raut Muara","Mabah","Mabah","Punti Kayan","Punti Kayan","Mabah","Punti Meraga","Raut Muara","Punti Meraga","Punti Meraga","Punti Kayan","Punti Meraga","Punti Meraga","Raut Muara","Raut Muara","Punti Kayan","Raut Muara","Punti Kayan","Raut Muara",null],["Raut Muara","Raut Muara","Engkahan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Sekendal","Sekendal","Nekan","Nekan","Nekan","Raut Muara","Nekan","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Raut Muara","Thang Raya","Thang Raya","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Nekan","Thang Raya","Thang Raya","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Nekan","Nekan","Nekan","Raut Muara","Sekendal","Sekendal","Sekendal","Thang Raya","Mawang Muda","Raut Muara","Nekan","Sungai Ilai","Thang Raya","Mawang Muda","Nekan","Sekendal","Sekendal","Sekendal","Sekendal","Sekendal","Mawang Muda","Nekan","Sekendal","Sekendal","Nekan","Nekan","Nekan","Sekendal","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Raut Muara","Nekan","Raut Muara","Raut Muara","Sekendal","Sekendal","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Sekendal","Sekendal","Raut Muara","Raut Muara","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Raut Muara","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Raut Muara","Nekan","Raut Muara","Raut Muara","Nekan","Raut Muara","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Raut Muara","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Raut Muara","Raut Muara","Nekan","Nekan","Raut Muara","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Nekan","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Raut Muara","Nekan","Raut Muara","Raut Muara","Raut Muara","Nekan","Nekan","Raut Muara","Nekan","Raut Muara","Nekan","Nekan","Nekan","Nekan","Nekan","Raut Muara","Raut Muara","Nekan","Raut Muara","Nekan","Raut Muara",null],[0.19,0.73,0.9,1.63,0.89,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1.52,1.05,0.79,0.34,0.34,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0.19,0.84,null],[110.35732373,110.364646,110.36697,110.33012,110.382398,110.35018,110.3496,110.33979,110.3392,110.36445,110.36841,110.32202,110.35327,110.31911,110.31763,110.33195,110.35412,110.32344,110.36413,110.36254,110.36646,110.36283,110.36675,110.36137,110.16354,110.16372,110.32661,110.32938,110.32516,110.36861,110.33284,110.33781,110.33212,110.3372,110.36574,110.33257,110.34154,110.35616,110.3613,110.31477,110.33329,110.31374,110.37061,110.33625,110.33791,110.36259,110.362,110.33256,110.33631,110.31984,110.32359,110.37332,110.37028,110.33054,110.33372,110.33746,110.34129,110.32551,110.18385,110.1879,110.17979,110.36363,110.30079,110.36566,110.31448,110.28419,110.34225,110.2337,110.32216,110.18839,110.18596,110.20519,110.20718,110.21,110.27253,110.31425,110.1902,110.1756,110.33865,110.3306,110.3298,110.21284,110.32766,110.33044,110.3305,110.35981,110.35798,110.33477,110.31973,110.31264,110.31561,110.17207,110.17525,110.33807,110.32835,110.32835,110.34051,110.33852,110.33894,110.35036,110.19277,110.1918,110.3808,110.373932,110.374666,110.377784,110.35593,null,110.3245,110.337107,110.31608758,110.348372,110.326397,110.366258,110.3415,110.3268,110.3247,110.371131,110.3248,110.350355,110.341,null,110.34488,110.3162,110.33050555,110.37808127,110.413361,110.3282,110.3247,110.3012,110.404424,110.3128,110.3708,110.3382,110.3147,110.3325,110.2246,110.3154,110.3774,110.3345,110.3404,110.3611,110.3662,110.3223,110.349,110.3456,110.381,110.3478,110.2449,110.3708,110.3815,110.339,110.2019,110.3729,110.3257,110.3241,110.3652,null,null,null,110.335,null,null,null,110.4153,110.323,null,110.338495,110.34569,110.374157,110.365692,110.356247,110.327065,110.327088,110.3185,110.31742,110.33014,110.3598,110.341497,110.314744,110.342128,110.33188,110.404806,110.303082,110.301143,110.317338,110.323837,110.323837,110.33358,110.33284,110.33054,110.38022,110.319458,110.330063,110.366528,110.354223,null,110.335938,110.327217,110.361035,110.319165,110.357067,110.328113,110.321227,110.331605,110.330802,110.330252,110.322872,110.318147,110.333623,110.33731,110.337595,110.3174017,null],[0.84380235,0.831412,0.85282,0.83377,0.8265169999999999,0.82667,0.83047,0.83286,0.83665,0.83839,0.83901,0.8243,0.8169999999999999,0.82902,0.83103,0.8701,0.81741,0.8304,0.8136100000000001,0.82091,0.8214900000000001,0.8221000000000001,0.8227100000000001,0.8357,0.69965,0.70011,0.8726,0.88015,0.88307,0.8192700000000001,0.88817,0.88895,0.89281,0.8935999999999999,0.81998,0.81366,0.81497,0.7631599999999999,0.76398,0.80991,0.8118,0.81628,0.85809,0.87869,0.88124,0.76001,0.76416,0.80827,0.80887,0.81476,0.81535,0.84013,0.86081,0.87161,0.87634,0.87691,0.8774999999999999,0.8087299999999999,0.68401,0.68466,0.6893,0.77155,0.79831,0.83545,0.90108,0.7015400000000001,0.78141,0.81596,0.90754,0.68367,0.68386,0.6863899999999999,0.68713,0.6871699999999999,0.81542,0.8997000000000001,0.68606,0.68775,0.88115,0.86988,0.87059,0.70529,0.9039,0.90159,0.90751,0.82995,0.83028,0.8333,0.90379,0.81288,0.81902,0.68504,0.68554,0.905,0.90666,0.907,0.80625,0.80245,0.80313,0.83931,0.68884,0.69343,0.827163,0.826067,0.859104,0.82699,0.814808,null,0.823,0.828973,0.8171738200000001,0.807447,0.826906,0.828272,0.8260999999999999,0.8164,0.807168,0.805305,0.8071,0.830195,0.8331,null,0.806294,0.814845,0.87241543,0.8534923800000001,0.809273,0.8942,0.8126,0.8016,0.830264,0.8083,0.864,0.88,0.8141,0.8809,0.5283,0.8145,0.8514,0.8103,0.8801,0.8408,0.8421,0.8235,0.8103,0.8177,0.8778,0.8107,0.4842,0.85,0.8312,0.8787,0.4844,0.8592,0.8811,0.8782,0.8442,null,null,null,0.8719,null,null,null,0.9103,0.9098000000000001,null,0.882462,0.82258,0.839105,0.826203,0.832717,0.905467,0.9054680000000001,0.89995,0.8991400000000001,0.804463,0.840113,0.879065,0.8926230000000001,0.878423,0.878739,0.830264,0.837838,0.83904,0.8147529999999999,0.811203,0.811203,0.871988,0.88396,0.8057800000000001,0.86422,0.819397,0.894752,0.804796,0.842483,null,0.879226,0.909282,0.845449,0.89037,0.806625,0.900701,0.90393,0.876982,0.9075839999999999,0.903892,0.8144670000000001,0.810162,0.8618749999999999,0.806882,0.874284,0.811342,null],["2026-05-28","2026-06-02","2026-06-07","2026-06-24","2026-06-25","2026-07-15","2026-07-15","2026-07-15","2026-07-15","2026-07-18","2026-07-18","2026-07-18","2026-07-19","2026-07-19","2026-07-19","2026-07-19","2026-07-19","2026-07-19","2026-07-24","2026-07-24","2026-07-24","2026-07-24","2026-07-24","2026-07-24","2026-07-31","2026-07-31","2026-07-31","2026-07-31","2026-07-31","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-03","2026-08-03","2026-08-03","2026-08-03","2026-08-03","2026-08-05","2026-08-05","2026-08-06","2026-08-06","2026-08-06","2026-08-06","2026-08-07","2026-08-07","2026-08-07","2026-08-07","2026-08-07","2026-08-07","2026-08-07","2026-08-07","2026-08-08","2026-08-08","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-10","2026-08-10","2026-08-11","2026-08-11","2026-08-11","2026-08-11","2026-08-12","2026-08-12","2026-08-15","2026-08-15","2026-08-15","2026-08-20","2026-08-20","2026-08-20","2026-08-26","2026-08-30","2026-08-30","2026-06-01","2026-06-03","2026-06-07","2026-06-25","2026-06-25","2026-07-02","2026-07-04","2026-07-04","2026-07-05","2026-07-09","2026-07-09","2026-07-10","2026-07-10","2026-07-14","2026-07-15","2026-07-15","2026-07-15","2026-07-17","2026-07-17","2026-07-18","2026-07-19","2026-07-19","2026-07-28","2026-07-29","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-01","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-02","2026-08-03","2026-08-03","2026-08-03","2026-08-03","2026-08-03","2026-08-03","2026-08-03","2026-08-03","2026-08-04","2026-08-04","2026-08-05","2026-08-05","2026-08-05","2026-08-05","2026-08-05","2026-08-05","2026-08-05","2026-08-06","2026-08-07","2026-08-07","2026-08-07","2026-08-08","2026-08-08","2026-08-08","2026-08-08","2026-08-08","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-09","2026-08-10","2026-08-10","2026-08-10","2026-08-10","2026-08-10","2026-08-10","2026-08-11","2026-08-11","2026-08-12","2026-08-12","2026-08-12","2026-08-13","2026-08-13","2026-08-13","2026-08-14","2026-08-14","2026-08-14","2026-08-15","2026-08-15","2026-08-15","2026-08-16","2026-08-16","2026-08-16","2026-08-16","2026-08-16","2026-08-16","2026-08-17","2026-08-17","2026-08-17","2026-08-20","2026-06-02","2026-06-10",null],["May","June","June","June","June","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","June","June","June","June","June","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","July","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","August","June","June","December"],["Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Kebakaran lahan (hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Sudah dibakar &amp; dijaga (non-hotspot)","Kebakaran lahan (non-hotspot)","Kebakaran lahan (non-hotspot)",null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]],"container":"<table class=\"table table-striped table-hover row-border order-column display\">\n  <thead>\n    <tr>\n      <th>Nama<\/th>\n      <th>Dusun<\/th>\n      <th>Desa<\/th>\n      <th>Luas Lahan<\/th>\n      <th>x<\/th>\n      <th>y<\/th>\n      <th>Tanggal Pembakaran Lahan<\/th>\n      <th>Bulan<\/th>\n      <th>Keterangan<\/th>\n      <th>Tutupan Lahan<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ftip","language":{"info":"Showing _TOTAL_ entries"},"pageLength":5,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":[3,4,5]},{"name":"Nama","targets":0},{"name":"Dusun","targets":1},{"name":"Desa","targets":2},{"name":"Luas Lahan","targets":3},{"name":"x","targets":4},{"name":"y","targets":5},{"name":"Tanggal Pembakaran Lahan","targets":6},{"name":"Bulan","targets":7},{"name":"Keterangan","targets":8},{"name":"Tutupan Lahan","targets":9}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+<div id="hostpot-aktivitas-membakar" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-hostpot-aktivitas-membakar">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 20fr) minmax(3em, 85fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-danger showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="fire" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-fire"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Titik Hotspot
+</p>
+<p class="value-box-value">
+105
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-success showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="shield-check" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-shield-check"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Dibakar &amp; Dijaga
+</p>
+<p class="value-box-value">
+109
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-warning showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<div data-icon="map-fill" class="html-fill-item html-fill-container value-box-grid">
+<div class="value-box-showcase html-fill-item html-fill-container">
+
+<i class="bi bi-map-fill"></i></div>
+<div class="value-box-area">
+<p class="value-box-title">
+Desa Terdampak
+</p>
+<p class="value-box-value">
+7
+</p>
+</div>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card cell html-fill-item html-fill-container bslib-card" data-title="Peta Sebaran Titik Insiden &amp; Aktivitas Pembakaran" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Peta Sebaran Titik Insiden &amp; Aktivitas Pembakaran
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="leaflet html-widget html-fill-item html-fill-container" id="htmlwidget-cad078e5d6779cb3c65a" style="width:100%;height:406px;"></div>
+<script type="application/json" data-for="htmlwidget-cad078e5d6779cb3c65a">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[0.84380235,0.827163,0.831412,0.874284,0.826067,0.859104,0.85282,0.811342,0.83377,0.82699,0.8265169999999999,0.81262,0.83274,0.814808,0.823,0.828973,0.8171738200000001,0.807447,0.826906,0.828272,0.8260999999999999,0.8164,0.82667,0.83047,0.83286,0.83665,0.807168,0.805305,0.8071,0.830195,0.8331,0.83839,0.83901,0.8243,0.806294,0.814845,0.8169999999999999,0.82902,0.83103,0.8701,0.81741,0.8304,0.8136100000000001,0.82091,0.8214900000000001,0.8221000000000001,0.8227100000000001,0.8357,0.87241543,0.8534923800000001,0.69965,0.70011,0.8726,0.88015,0.88307,0.8192700000000001,0.88817,0.88895,0.89281,0.8935999999999999,0.81998,0.81366,0.81497,0.809273,0.8942,0.89,0.8126,0.8016,0.830264,0.8083,0.864,0.7631599999999999,0.76398,0.80991,0.8118,0.81628,0.85809,0.87869,0.88124,0.76001,0.76416,0.80827,0.80887,0.81476,0.81535,0.84013,0.86081,0.87161,0.87634,0.87691,0.8774999999999999,0.8087299999999999,0.88,0.8141,0.8809,0.5283,0.8145,0.8514,0.8103,0.8801,0.8408,0.8421,0.8235,0.8103,0.8177,0.68401,0.68466,0.6893,0.77155,0.79831,0.8778,0.8107,0.4842,0.85,0.8312,0.8787,0.4844,0.8592,0.8811,0.8782,0.83545,0.90108,0.8442,0.8719,0.7015400000000001,0.78141,0.81596,0.90754,0.68367,0.68386,0.6863899999999999,0.68713,0.6871699999999999,0.81542,0.8997000000000001,0.68606,0.900653,0.9098000000000001,0.68775,0.88115,0.882462,0.82258,0.839105,0.826203,0.832717,0.86988,0.87059,0.70529,0.9039,0.90159,0.90751,0.905467,0.9054680000000001,0.89995,0.8991400000000001,0.804463,0.840113,0.879065,0.8926230000000001,0.878423,0.82995,0.83028,0.878739,0.830264,0.837838,0.83904,0.8147529999999999,0.811203,0.8333,0.90379,0.81288,0.81902,0.811203,0.871988,0.68504,0.68554,0.88396,0.8057800000000001,0.86422,0.819397,0.894752,0.804796,0.842483,0.879226,0.905,0.90666,0.907,0.909282,0.845449,0.89037,0.806625,0.900701,0.90393,0.876982,0.9075839999999999,0.903892,0.8144670000000001,0.810162,0.8618749999999999,0.80625,0.80245,0.80313,0.806882,0.83931,0.68884,0.69343],[110.35732373,110.3808,110.364646,110.337595,110.373932,110.374666,110.36697,110.3174017,110.33012,110.377784,110.382398,110.36205,110.34207,110.35593,110.3245,110.337107,110.31608758,110.348372,110.326397,110.366258,110.3415,110.3268,110.35018,110.3496,110.33979,110.3392,110.3247,110.371131,110.3248,110.350355,110.341,110.36445,110.36841,110.32202,110.34488,110.3162,110.35327,110.31911,110.31763,110.33195,110.35412,110.32344,110.36413,110.36254,110.36646,110.36283,110.36675,110.36137,110.33050555,110.37808127,110.16354,110.16372,110.32661,110.32938,110.32516,110.36861,110.33284,110.33781,110.33212,110.3372,110.36574,110.33257,110.34154,110.413361,110.3282,110.3342,110.3247,110.3012,110.404424,110.3128,110.3708,110.35616,110.3613,110.31477,110.33329,110.31374,110.37061,110.33625,110.33791,110.36259,110.362,110.33256,110.33631,110.31984,110.32359,110.37332,110.37028,110.33054,110.33372,110.33746,110.34129,110.32551,110.3382,110.3147,110.3325,110.2246,110.3154,110.3774,110.3345,110.3404,110.3611,110.3662,110.3223,110.349,110.3456,110.18385,110.1879,110.17979,110.36363,110.30079,110.381,110.3478,110.2449,110.3708,110.3815,110.339,110.2019,110.3729,110.3257,110.3241,110.36566,110.31448,110.3652,110.335,110.28419,110.34225,110.2337,110.32216,110.18839,110.18596,110.20519,110.20718,110.21,110.27253,110.31425,110.1902,110.316363,110.323,110.1756,110.33865,110.338495,110.34569,110.374157,110.365692,110.356247,110.3306,110.3298,110.21284,110.32766,110.33044,110.3305,110.327065,110.327088,110.3185,110.31742,110.33014,110.3598,110.341497,110.314744,110.342128,110.35981,110.35798,110.33188,110.404806,110.303082,110.301143,110.317338,110.323837,110.33477,110.31973,110.31264,110.31561,110.323837,110.33358,110.17207,110.17525,110.33284,110.33054,110.38022,110.319458,110.330063,110.366528,110.354223,110.335938,110.33807,110.32835,110.32835,110.327217,110.361035,110.319165,110.357067,110.328113,110.321227,110.331605,110.330802,110.330252,110.322872,110.318147,110.333623,110.34051,110.33852,110.33894,110.33731,110.35036,110.19277,110.1918],7,null,null,{"interactive":true,"className":"","stroke":true,"color":["#FF7675","#00B894","#FF7675","#B19F84","#00B894","#00B894","#FF7675","#B19F84","#FF7675","#00B894","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#00B894","#FF7675","#FF7675","#FF7675"],"weight":1.5,"opacity":0.5,"fill":true,"fillColor":["#FF7675","#00B894","#FF7675","#B19F84","#00B894","#00B894","#FF7675","#B19F84","#FF7675","#00B894","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#00B894","#FF7675","#FF7675","#FF7675","#00B894","#FF7675","#FF7675","#FF7675"],"fillOpacity":0.85},null,null,["<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Yosef Deri<br><b>Tanggal:<\/b> 2026-05-28<br><b>Luas Terbakar (Ha):<\/b> 0.19 Ha<br><b>Keterangan:<\/b> Telah dilakukan verifikasi, ground check dan penggalian aspirasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Peronikus Firman<br><b>Tanggal:<\/b> 2026-06-01<br><b>Luas Terbakar (Ha):<\/b> 1.52 Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Tundon<br><b>Tanggal:<\/b> 2026-06-02<br><b>Luas Terbakar (Ha):<\/b> 0.73 Ha<br><b>Keterangan:<\/b> Follow up tim Agroforestry untuk area sekitar yang belum ditanami sawit (kebun lada)<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Kebakaran lahan (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Silvinus Nan<br><b>Tanggal:<\/b> 2026-06-02<br><b>Luas Terbakar (Ha):<\/b> 0.19 Ha<br><b>Keterangan:<\/b> Follow up tim Agroforestry untuk area sekitar yang belum ditanami sawit (kebun kacang, sawah)<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> A. Basri<br><b>Tanggal:<\/b> 2026-06-03<br><b>Luas Terbakar (Ha):<\/b> 1.05 Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Grama Jaya<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Yupita Kolara<br><b>Tanggal:<\/b> 2026-06-07<br><b>Luas Terbakar (Ha):<\/b> 0.79 Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, 0.23 Ha area yang terpakar masuk ke APD (Avoided Planed Deforestation)<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Engkahan<br><b>Dusun:<\/b> Entubah<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Mace<br><b>Tanggal:<\/b> 2026-06-07<br><b>Luas Terbakar (Ha):<\/b> 0.9 Ha<br><b>Keterangan:<\/b> Akan dilakukan verifikasi dan penggalian aspirasi kepada pemilik lahan<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Kebakaran lahan (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Romulus Andi<br><b>Tanggal:<\/b> 2026-06-10<br><b>Luas Terbakar (Ha):<\/b> 0.84 Ha<br><b>Keterangan:<\/b> Akan dilakukan verifikasi dan penggalian aspirasi kepada pemilik lahan<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Pian/Piyan (belum teridentifikasi)<br><b>Tanggal:<\/b> 2026-06-24<br><b>Luas Terbakar (Ha):<\/b> 1.63 Ha<br><b>Keterangan:<\/b> Akan dilakukan verifikasi dan penggalian aspirasi kepada pemilik lahan<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Honorius Barus<br><b>Tanggal:<\/b> 2026-06-25<br><b>Luas Terbakar (Ha):<\/b> 0.34 Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang (8 PT CMI & 2 warga lokal)<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Buin<br><b>Tanggal:<\/b> 2026-06-25<br><b>Luas Terbakar (Ha):<\/b> 0.89 Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 11 orang (8 PT CMI & 4 warga lokal). Total area terbakar 1.58 Ha, dengan area yang masuk ke dalam konsesi sekitar 0.89 Ha<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Teka Lestari (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-11<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Telah dilakukan verifikasi, ground check dan penyusunan berita acara<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Jais (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-14<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Telah dilakukan verifikasi, ground check dan penyusunan berita acara<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Meli<br><b>Tanggal:<\/b> 2026-06-25<br><b>Luas Terbakar (Ha):<\/b> 0.34 Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang (8 PT CMI & 2 warga lokal)<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ade Saputra<br><b>Tanggal:<\/b> 2026-07-04<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 4 orang, laporan hasil ground check dan verifikasi akan segera disusun. Telah berkoordinasi dengan tim Agroforestry<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Samsul<br><b>Tanggal:<\/b> 2026-07-04<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 4 orang, laporan hasil ground check dan verifikasi akan segera disusun. Telah berkoordinasi dengan tim Agroforestry<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Berri, Gatot dan Rio<br><b>Tanggal:<\/b> 2026-07-05<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dubin<br><b>Tanggal:<\/b> 2026-07-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Eko<br><b>Tanggal:<\/b> 2026-07-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Abdurrahman<br><b>Tanggal:<\/b> 2026-07-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 9 orang, laporan hasil ground check dan verifikasi akan segera disusun. Telah berkoordinasi dengan tim Agroforestry<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Darius<br><b>Tanggal:<\/b> 2026-07-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Sarif<br><b>Tanggal:<\/b> 2026-07-14<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Amin (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Aripin (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Topik (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Jitan (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Erik<br><b>Tanggal:<\/b> 2026-07-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Pintus<br><b>Tanggal:<\/b> 2026-07-15<br><b>Luas Terbakar (Ha):<\/b> 1 Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Runtus<br><b>Tanggal:<\/b> 2026-07-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Narso<br><b>Tanggal:<\/b> 2026-07-17<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Wento<br><b>Tanggal:<\/b> 2026-07-17<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Eko (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-18<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Redis (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-18<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Barto Subari (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-18<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Iman<br><b>Tanggal:<\/b> 2026-07-19<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Jesen<br><b>Tanggal:<\/b> 2026-07-19<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 1<br><b>Tanggal:<\/b> 2026-07-19<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Danto (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-19<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Adi (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-19<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Milias (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-19<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 2<br><b>Tanggal:<\/b> 2026-07-19<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dodi (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-19<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 3<br><b>Tanggal:<\/b> 2026-07-24<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 4<br><b>Tanggal:<\/b> 2026-07-24<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 5<br><b>Tanggal:<\/b> 2026-07-24<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 6<br><b>Tanggal:<\/b> 2026-07-24<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 7<br><b>Tanggal:<\/b> 2026-07-24<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Nang (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-24<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kakang<br><b>Tanggal:<\/b> 2026-07-28<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Grama Jaya<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Hubartus Darsono<br><b>Tanggal:<\/b> 2026-07-29<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 8<br><b>Tanggal:<\/b> 2026-07-31<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 9<br><b>Tanggal:<\/b> 2026-07-31<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kalim (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-07-31<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Komunal Masyarakat<br><b>Tanggal:<\/b> 2026-07-31<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kalim<br><b>Tanggal:<\/b> 2026-07-31<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 11<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Tengah (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Iman (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Judin (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Komunal Masyarakat<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 11<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Pitor (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dedi (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ani<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Berto<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 3 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Marsianus Nambet<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ariyanto<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Abang<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 4 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Romansa<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Menong<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Grama Jaya<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Marselinus Roso<br><b>Tanggal:<\/b> 2026-08-01<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Thang Raya<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Nopi (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Thang Raya<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Masyarakat<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dimut (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Edo (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Komunal Masyarakat<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Sepupu Tibius (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Iwan (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lintang (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Thang Raya<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Diki (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Thang Raya<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Masyarakat<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ruslan (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Rantut (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Pian (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ace (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kunto (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dum (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Remun (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ben (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Rambai (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Azis (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Rego (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Eki<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lusia Jemi<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dores<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Jemain<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Harto<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Suratin<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Banus, Yuda<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Nas<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Iwan<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dorah<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Barto Subari<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Laten<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Sas<br><b>Tanggal:<\/b> 2026-08-02<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 12<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 13<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 14<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Thang Raya<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 15<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Mawang Muda<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Hutan Komunal<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dius<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> boyon<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lojong<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Along<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Pet<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Madi<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Darmo<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Grama Jaya<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kenoh<br><b>Tanggal:<\/b> 2026-08-03<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Hendra<br><b>Tanggal:<\/b> 2026-08-04<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kerang<br><b>Tanggal:<\/b> 2026-08-04<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Masyarakat<br><b>Tanggal:<\/b> 2026-08-05<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 16<br><b>Tanggal:<\/b> 2026-08-05<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Semaun<br><b>Tanggal:<\/b> 2026-08-05<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Iman<br><b>Tanggal:<\/b> 2026-08-05<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sungai Ilai<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Blasius Tola (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-06<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Thang Raya<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Hutan Komunal<br><b>Tanggal:<\/b> 2026-08-06<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Mawang Muda<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 17<br><b>Tanggal:<\/b> 2026-08-06<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Banggal (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-06<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 18<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 19<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 20<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 21<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 22<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Mawang Muda<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 23<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 24<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 25<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Rano, Paeng, Musin, Jelani, Biar, Talok<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Murat<br><b>Tanggal:<\/b> 2026-08-07<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 26<br><b>Tanggal:<\/b> 2026-08-08<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lintang (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-08<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ajan<br><b>Tanggal:<\/b> 2026-08-08<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Diman<br><b>Tanggal:<\/b> 2026-08-08<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 6 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Eno<br><b>Tanggal:<\/b> 2026-08-08<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Markus Agustinus Simbolon<br><b>Tanggal:<\/b> 2026-08-08<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 6 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Remi<br><b>Tanggal:<\/b> 2026-08-08<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 4 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kedau (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kedau (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Tiah (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Becik (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Madu (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Becik (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Nekan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Aliyas<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Langsuono<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ageo<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 2 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Panus<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 4 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Januaria<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 9 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Stefanus Thomas<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 3 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Urbanus Tingih<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 11 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Liam<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Ties<br><b>Tanggal:<\/b> 2026-08-09<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 12 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Pemus (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Darso (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Tengah<br><b>Tanggal:<\/b> 2026-08-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Reli<br><b>Tanggal:<\/b> 2026-08-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 4 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Agnes<br><b>Tanggal:<\/b> 2026-08-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 3 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lipa<br><b>Tanggal:<\/b> 2026-08-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Petrus Peto<br><b>Tanggal:<\/b> 2026-08-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Sujatmiko<br><b>Tanggal:<\/b> 2026-08-10<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 10 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Joss (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-11<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Arun (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-11<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Komunal Masyarakat<br><b>Tanggal:<\/b> 2026-08-11<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Mijo (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-11<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Yopinus Toton<br><b>Tanggal:<\/b> 2026-08-11<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Petrus Han<br><b>Tanggal:<\/b> 2026-08-11<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 11 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 27<br><b>Tanggal:<\/b> 2026-08-12<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 28<br><b>Tanggal:<\/b> 2026-08-12<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Jinyan, Ahim<br><b>Tanggal:<\/b> 2026-08-12<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 15 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Yuliana<br><b>Tanggal:<\/b> 2026-08-12<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 9 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lusiana Diyut<br><b>Tanggal:<\/b> 2026-08-12<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 9 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lasius Lingkan<br><b>Tanggal:<\/b> 2026-08-13<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Prederik Alwi<br><b>Tanggal:<\/b> 2026-08-13<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 9 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Yosepa Endang<br><b>Tanggal:<\/b> 2026-08-13<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 6 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Peripin<br><b>Tanggal:<\/b> 2026-08-14<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 18 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Tinggang<br><b>Tanggal:<\/b> 2026-08-14<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 2 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Komunal Masyarakat<br><b>Tanggal:<\/b> 2026-08-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Murat (data dashboard hotspot) 2<br><b>Tanggal:<\/b> 2026-08-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Murat (data dashboard hotspot) 2<br><b>Tanggal:<\/b> 2026-08-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Agineus<br><b>Tanggal:<\/b> 2026-08-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Mabah<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Agato<br><b>Tanggal:<\/b> 2026-08-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 4 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lio<br><b>Tanggal:<\/b> 2026-08-15<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 6 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Usmanto<br><b>Tanggal:<\/b> 2026-08-16<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Kidarto<br><b>Tanggal:<\/b> 2026-08-16<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 3 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Lacing, Arun, Barsah, Tangkok<br><b>Tanggal:<\/b> 2026-08-16<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 6 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Abidin<br><b>Tanggal:<\/b> 2026-08-16<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Bejik Jayamelana, Bangal<br><b>Tanggal:<\/b> 2026-08-16<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 5 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Meraga<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Bambang, Beren, Iwan<br><b>Tanggal:<\/b> 2026-08-16<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 7 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Nodi<br><b>Tanggal:<\/b> 2026-08-17<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 6 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Sudirman<br><b>Tanggal:<\/b> 2026-08-17<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Nekan<br><b>Dusun:<\/b> Punti Kayan<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Iyo<br><b>Tanggal:<\/b> 2026-08-17<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 8 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Moses (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-20<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Komunal Masyarakat<br><b>Tanggal:<\/b> 2026-08-20<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Komunal Masyarakat<br><b>Tanggal:<\/b> 2026-08-20<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> Raut Muara<br><b>Tipe Insiden:<\/b> Sudah dibakar & dijaga (non-hotspot)<br><b>Nama Pemilik Lahan:<\/b> Akum<br><b>Tanggal:<\/b> 2026-08-20<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Tim pengawalan gabungan berjumlah 13 orang, laporan hasil ground check dan verifikasi akan segera disusun<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Raut Muara<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Dedi (data dashboard hotspot)<br><b>Tanggal:<\/b> 2026-08-26<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 29<br><b>Tanggal:<\/b> 2026-08-30<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>","<div style='color: #222; font-family: sans-serif; font-size: 12px; line-height: 1.4;'><b>Desa:<\/b> Sekendal<br><b>Dusun:<\/b> NA<br><b>Tipe Insiden:<\/b> Kebakaran lahan (hotspot)<br><b>Nama Pemilik Lahan:<\/b> Unidentified 30<br><b>Tanggal:<\/b> 2026-08-30<br><b>Luas Terbakar (Ha):<\/b> NA Ha<br><b>Keterangan:<\/b> Akan dilakukan ground check dan verifikasi<\/div>"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#FF7675","#B19F84","#00B894"],"labels":["Kebakaran lahan (hotspot)","Kebakaran lahan (non-hotspot)","Sudah dibakar & dijaga (non-hotspot)"],"na_color":null,"na_label":"NA","opacity":0.9,"position":"bottomright","type":"factor","title":"Kategori Insiden","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[0.4842,0.9098000000000001],"lng":[110.16354,110.413361]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
+
+
+
+</body></html>
